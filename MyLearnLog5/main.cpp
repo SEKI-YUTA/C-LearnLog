@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <compare>
 
 
 
@@ -10,13 +11,18 @@ int addNumbers(int firstNum, int secondNum) {
     return sum;
 }
 
-int main() {
-    char mychar = 65;
-    char bbb {'B'};
-    std::cout << static_cast<int>(mychar) << std::endl;
-    std::cout << mychar << std::endl;
-    std::cout << bbb << std::endl;
-
+int 
+main() {
+    // char mychar = 67;
+    // std::cout << static_cast<int>(mychar) << std::endl;
+    // std::cout << (double)31/10 << std::endl;
+    // std::cout << (double)1/10 << std::endl;
+    std::string input;
+    std::getline(std::cin, input);
+    bool flg1 = false;
+    if(input != "") {
+        std::cout << "Hi!" << std::endl;
+    }
 
     return 0;
 }
