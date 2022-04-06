@@ -4,13 +4,15 @@
 
 //Engineer is doing private inheritance
 
-class Engineer : private Person
+class Engineer : public Person
 {
+using Person::Person;
 friend std::ostream& operator<<(std::ostream& out , const Engineer& operand);
 public:
-    Engineer();
+    // Engineer();
     Engineer(std::string_view fullname, int age,
     std::string_view address, int contract_count);
+    Engineer(const Engineer& source);
 
     ~Engineer();
     
@@ -19,6 +21,7 @@ public:
         m_age = 23; // OK
         //m_address = "897-78-723"; Compiler error
     }
+    void detail();
     protected:
         using Person::get_address;
         using Person::get_age;

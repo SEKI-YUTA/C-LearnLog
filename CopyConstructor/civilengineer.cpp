@@ -7,6 +7,10 @@ CivilEngineer::CivilEngineer()
 {
     std::cout << "CivilEngineer Construcotor" << std::endl;
 }
+CivilEngineer::CivilEngineer(const CivilEngineer& source):Engineer(source) {
+        std::cout << "Copy Constructor CivilEngineer" << std::endl;
+}
+
 CivilEngineer::CivilEngineer(std::string_view fullname, int age,
 std::string_view address, int contract_count, std::string_view speciality)
 : Engineer(fullname, age, address, contract_count), m_speciality(speciality)

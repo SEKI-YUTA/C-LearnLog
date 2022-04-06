@@ -11,6 +11,7 @@ public:
     Engineer();
     Engineer(std::string_view fullname, int age,
     std::string_view address, int contract_count);
+    Engineer(const Engineer& source);
 
     ~Engineer();
     
@@ -19,6 +20,7 @@ public:
         m_age = 23; // OK
         //m_address = "897-78-723"; Compiler error
     }
+    void detail();
     protected:
         using Person::get_address;
         using Person::get_age;

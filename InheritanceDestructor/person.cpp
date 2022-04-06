@@ -5,6 +5,12 @@ Person::Person() {
     std::cout << "Person Constructor" << std::endl;
 }
 
+Person::Person(const Person& source)
+: m_full_name(source.m_full_name), m_age(source.m_age), m_address(source.m_address)
+{
+    std::cout << "Copy Constructor Person" << std::endl;
+}
+
 
 Person::Person(std::string_view fullname, int age, std::string_view address) {
     std::cout << "Person Constructor" << std::endl;
@@ -21,5 +27,5 @@ std::ostream& operator<<(std::ostream& out, const Person& person) {
 }
 
 Person::~Person() {
-    
+    std::cout << "Destrucotor Person" << std::endl;
 }
